@@ -1,0 +1,20 @@
+!!!
+%html{ :lang => "en" }
+	%head
+		%meta{ :charset => "UTF-8" }
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+		%title Level Up
+		%link{ :rel => "stylesheet", :href => "assets/css/vendors.min.css"}
+		%link{ :rel => "stylesheet", :href => "assets/css/styles.css"}
+
+
+	%body
+
+		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/header.haml')).render
+
+		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/section.haml')).render
+
+		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/footer.haml')).render
+
+		%script{ :src => "assets/js/vendors.min.js"}
+		%script{ :src => "assets/js/app.js"}

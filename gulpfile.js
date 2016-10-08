@@ -3,17 +3,17 @@ var gulp = require('gulp'),
 	del = require('del'),
 	browserSync = require("browser-sync"),
 	reload = browserSync.reload,
-	extender = require('gulp-html-extend'),
+	haml = require('gulp-ruby-haml'),	
 	mainBowerFiles = require("main-bower-files"),
 	$ = require('gulp-load-plugins')({lazy:true});
 
 
-// Compile HTML
-gulp.task('html', function () {
-	log('Compiling HTML');
-	return gulp.src(config.src.html)
-		.pipe($.plumber())
-		.pipe(extender(config.extender))
+// Compile HAML
+gulp.task('haml', function () {
+	log('Compiling HAML');
+	return gulp.src(config.src.haml)
+		.pipe($.plumber())		
+		.pipe(haml())
 		.pipe($.if(config.env === 'production', $.htmlmin()))
 		.on('error', $.util.log)
 		.pipe(gulp.dest(config.build.html))
@@ -91,7 +91,7 @@ gulp.task('vendors', function() {
 // Compile build
 gulp.task('build', function() {
 	log('Compiling build');
-	gulp.start('html');
+	gulp.start('haml');
 	gulp.start('scss');
 	gulp.start('js');
 	gulp.start('images');
@@ -105,9 +105,9 @@ gulp.task('server', function () {
 
 // Watch files changes
 gulp.task('watch', function () {
-	log('Watching html, scss, js and image files');
-	$.watch([config.watch.html], function (event, cb) {
-		gulp.start('html');
+	log('Watching haml, scss, js and image files');
+	$.watch([config.watch.haml], function (event, cb) {
+		gulp.start('haml');
 	});
 	$.watch([config.watch.scss], function (event, cb) {
 		gulp.start('scss');

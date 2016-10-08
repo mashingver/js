@@ -1,34 +1,37 @@
+'use strict';
 module.exports = function() {
 
-	var pngquant = require('imagemin-pngquant');
+	var pngquant = require('imagemin-pngquant'),
+			buildPath = './build/',
+			srcPath = './src/';
 
-	var config =  {
+	var config = {
 		env: 'development',
 		build: {
-			html: './build/',
-			css: './build/assets/css/',
-			js: './build/assets/js/',
-			img: './build/assets/images/'
+			html: buildPath,
+			css: buildPath + 'assets/css/',
+			js: buildPath + 'assets/js/',
+			img: buildPath + 'assets/images/'
 		},
 		src: {
-			html: './src/html/index.html',
-			scss: './src/scss/styles.scss',
-			js: './src/js/main.js',
-			img: './src/images/**/*.*'
+			haml: srcPath + 'haml/index.haml',
+			scss: srcPath + 'scss/styles.scss',
+			js: srcPath + 'js/main.js',
+			img: srcPath + 'images/**/*.*'
 		},
 		watch: {
-			html: './src/html/**/*.html',
-			scss: './src/scss/**/*.scss',
-			js: './src/js/**/*.js',
-			img: './src/images/**/*.*'
+			haml: srcPath + 'haml/**/*.haml',
+			scss: srcPath + 'scss/**/*.scss',
+			js: srcPath + 'js/**/*.js',
+			img: srcPath + 'images/**/*.*'
 		},
-		clean: './build/*',
+		clean: buildPath + '*',
 		autoprefixer: {
 			browsers: ['last 10 versions']
 		},
 		browserSyncConfig: {
 			server: {
-				baseDir: "./build/"
+				baseDir: buildPath
 			},
 			host: 'localhost',
 			port: 9000,
