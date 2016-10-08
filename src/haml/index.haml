@@ -10,11 +10,14 @@
 
 	%body
 
-		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/header.haml')).render
+		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/layout/header.haml')).render
 
-		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/section.haml')).render
+		.page-wrapper
+			= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/sections/section1.haml')).render
+			= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/sections/section2.haml')).render
+			= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/sections/section3.haml')).render
 
-		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/footer.haml')).render
+		= Haml::Engine.new(File.read('/Users/mashingver/Public/level-up/src/haml/partials/layout/footer.haml')).render
 
 		%script{ :src => "assets/js/vendors.min.js"}
 		%script{ :src => "assets/js/app.js"}

@@ -1,9 +1,16 @@
+// Font
 @import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400';
-
 $mainFont: 'Droid Sans', sans-serif;
 $light: 300;
 $normal: 400;
 $bold: 700;
-$colorText: rgb(39, 37, 43);
-$colorBorders: rgba($colorText, .3);
-$colorActive: #ff8872;
+
+// Color palette
+$primary-color-dark:   #455A64;
+$primary-color:        #607D8B;
+$primary-color-light:  #CFD8DC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #FF4081;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;

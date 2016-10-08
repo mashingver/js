@@ -16,7 +16,7 @@ module.exports = function() {
 		src: {
 			haml: srcPath + 'haml/index.haml',
 			scss: srcPath + 'scss/styles.scss',
-			js: srcPath + 'js/main.js',
+			js: srcPath + 'js/app.js',
 			img: srcPath + 'images/**/*.*'
 		},
 		watch: {

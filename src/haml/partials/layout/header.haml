@@ -1,0 +1,6 @@
+.header
+	.header__content
+		%ul.menu
+			- (1...4).each do |i|
+				%li
+					%a{:href => "#section-#{i}"} Section #{i}
