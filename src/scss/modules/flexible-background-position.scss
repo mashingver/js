@@ -1,0 +1,18 @@
+.flexible-background-position {
+	display: flex;
+	align-items: center;
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 15px;
+	color: white;
+	padding: 10px;
+	background: url('../images/code-pirate.svg') no-repeat bottom right $accent-color;
+	//background-position: right 10px bottom 10px;
+	//background-position: calc(100% - 20px) calc(100% - 10px);
+	background-origin: content-box;
+	/*
+	* We have three possibilities to align bg-image: 1)background-position with offsets (aka extended background position) - background-position: right 10px bottom 10px. 2) change background-origin property (background-origin: content-box;) this means that any background images will be offset from the sides/corners as much as our padding is. 3) Do it with calc() - background-position: calc(100% - 20px) calc(100% - 10px);
+	*/
+}

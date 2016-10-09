@@ -1,0 +1,23 @@
+.multiple-borders {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 15px;
+	border-radius: 20px;
+	outline: 1px dashed white;
+	outline-offset: -15px;
+	background-color: yellowgreen;
+	box-shadow: 0 0 0 10px #655, // this shadow is on top
+							0 0 0 15px deeppink, // this shadow is underneath
+							0 2px 5px 15px rgba(0,0,0,.6); // this shadow is underneath all
+
+	/*
+	 Shadows don’t work exactly like borders, as they don’t affect layout and are oblivious to the box-sizing property. However, you can emulate the extra space a border would occupy via padding or margins (depending on whether the shadow is inset or not)
+	*/
+}

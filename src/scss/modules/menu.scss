@@ -1,0 +1,12 @@
+.menu {
+	display: flex;
+	li {
+		padding: 0 .4em;
+		position: relative;
+		&:hover {
+			.callout {
+				opacity: 1;
+			}
+		}
+	}
+}

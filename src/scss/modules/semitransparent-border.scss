@@ -1,0 +1,14 @@
+.semitransparent-border {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 20px solid hsla(0%,0%,100%,.5);
+}
