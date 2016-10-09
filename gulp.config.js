@@ -37,10 +37,7 @@ module.exports = function() {
 			port: 9000,
 			open:        true,
 			debug:       true
-		},
-		cssimport: {
-			matchPattern: '*.css'
-		},
+		},		
 		extender: {
 			annotations: true,
 			verbose: false
